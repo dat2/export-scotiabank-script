@@ -31,8 +31,8 @@ var inline_src = (<><![CDATA[
         
         // amount is the second element
         const [debitNode, creditNode] = row.querySelectorAll('.balance');
-        const debit = parseInt(debitNode.textContent);
-        const credit = parseInt(creditNode.textContent);
+        const debit = parseFloat(debitNode.textContent);
+        const credit = parseFloat(creditNode.textContent);
         const amount = isNaN(debit) ? credit : -debit;
 
         // credit card has no "transactiont type"
